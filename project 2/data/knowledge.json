@@ -1,0 +1,191 @@
+{
+    "intents": [
+      {
+        "id": "identity",
+        "priority": 100,
+        "kind": "info",
+        "patterns": [
+          "who are you",
+          "what are you",
+          "your name",
+          "introduce yourself",
+          "what is your name"
+        ],
+        "response": "I'm your voice assistant — a small Python service that listens for spoken commands, looks them up in a knowledge base, and responds with text and speech. I can tell you the time and date, open websites, run searches, and answer common questions. How can I help?"
+      },
+      {
+        "id": "capabilities",
+        "priority": 95,
+        "kind": "info",
+        "patterns": [
+          "what can you do",
+          "your capabilities",
+          "help me",
+          "what do you do",
+          "how can you help"
+        ],
+        "response": "I can help with a few things: tell you the current time or date, open websites like Google, YouTube, GitHub, Gmail, Maps, and Wikipedia, run web searches, and answer general questions from my knowledge base. Just speak naturally — for example, \"what time is it\" or \"search for python tutorials\"."
+      },
+      {
+        "id": "greeting",
+        "kind": "smalltalk",
+        "patterns": ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "good evening"],
+        "response": [
+          "Hello. How can I help you today?",
+          "Hi there. What can I do for you?",
+          "Good to hear from you. What do you need?"
+        ]
+      },
+      {
+        "id": "thanks",
+        "kind": "smalltalk",
+        "patterns": ["thank you", "thanks", "thanks a lot", "appreciate it", "cheers"],
+        "response": [
+          "You're welcome.",
+          "Happy to help.",
+          "Anytime."
+        ]
+      },
+      {
+        "id": "how_are_you",
+        "kind": "smalltalk",
+        "patterns": ["how are you", "how are you doing", "how's it going", "how do you feel"],
+        "response": "I'm operating normally — thanks for asking. What can I help you with?"
+      },
+      {
+        "id": "compliment",
+        "kind": "smalltalk",
+        "patterns": ["good job", "well done", "nice work", "you are smart", "you're smart", "clever"],
+        "response": [
+          "Thank you. I appreciate that.",
+          "Glad I could help."
+        ]
+      },
+      {
+        "id": "apology",
+        "kind": "smalltalk",
+        "patterns": ["sorry", "my bad", "apologies"],
+        "response": "No problem at all. What would you like to do next?"
+      },
+      {
+        "id": "capital_france",
+        "kind": "info",
+        "patterns": ["capital of france", "what is the capital of france"],
+        "response": "The capital of France is Paris."
+      },
+      {
+        "id": "capital_japan",
+        "kind": "info",
+        "patterns": ["capital of japan", "what is the capital of japan"],
+        "response": "The capital of Japan is Tokyo."
+      },
+      {
+        "id": "capital_india",
+        "kind": "info",
+        "patterns": ["capital of india", "what is the capital of india"],
+        "response": "The capital of India is New Delhi."
+      },
+      {
+        "id": "largest_planet",
+        "kind": "info",
+        "patterns": ["largest planet", "biggest planet", "what is the largest planet"],
+        "response": "Jupiter is the largest planet in our solar system."
+      },
+      {
+        "id": "python_language",
+        "kind": "info",
+        "patterns": ["what is python", "tell me about python", "python programming"],
+        "response": "Python is a high-level, general-purpose programming language known for its readable syntax and large standard library. It's widely used in web development, data science, automation, and scripting."
+      },
+      {
+        "id": "meaning_of_life",
+        "kind": "smalltalk",
+        "patterns": ["meaning of life", "why are we here", "purpose of life"],
+        "response": "42. But you may want a more philosophical source than me."
+      },
+      {
+        "id": "open_google",
+        "kind": "site",
+        "priority": 70,
+        "patterns": ["open google", "google", "go to google"],
+        "url": "https://www.google.com",
+        "response": "Opening Google."
+      },
+      {
+        "id": "open_youtube",
+        "kind": "site",
+        "priority": 70,
+        "patterns": ["open youtube", "youtube", "go to youtube"],
+        "url": "https://www.youtube.com",
+        "response": "Opening YouTube."
+      },
+      {
+        "id": "open_github",
+        "kind": "site",
+        "priority": 70,
+        "patterns": ["open github", "github", "go to github"],
+        "url": "https://github.com",
+        "response": "Opening GitHub."
+      },
+      {
+        "id": "open_chatgpt",
+        "kind": "site",
+        "priority": 70,
+        "patterns": ["open chatgpt", "chatgpt", "open openai", "openai"],
+        "url": "https://chat.openai.com",
+        "response": "Opening ChatGPT."
+      },
+      {
+        "id": "open_gmail",
+        "kind": "site",
+        "priority": 70,
+        "patterns": ["open gmail", "gmail", "open mail", "check email"],
+        "url": "https://mail.google.com",
+        "response": "Opening Gmail."
+      },
+      {
+        "id": "open_maps",
+        "kind": "site",
+        "priority": 70,
+        "patterns": ["open maps", "google maps", "maps"],
+        "url": "https://maps.google.com",
+        "response": "Opening Google Maps."
+      },
+      {
+        "id": "open_wikipedia",
+        "kind": "site",
+        "priority": 70,
+        "patterns": ["open wikipedia", "wikipedia"],
+        "url": "https://www.wikipedia.org",
+        "response": "Opening Wikipedia."
+      },
+      {
+        "id": "search_web",
+        "kind": "search",
+        "priority": 60,
+        "patterns": ["search", "search for", "google", "look up", "find"],
+        "response": "Searching the web."
+      },
+      {
+        "id": "time",
+        "kind": "action",
+        "priority": 80,
+        "patterns": ["time","what time", "what is the time", "current time", "the time", "clock"],
+        "response": "__DYNAMIC_TIME__"
+      },
+      {
+        "id": "date",
+        "kind": "action",
+        "priority": 80,
+        "patterns": ["date","what date", "what is the date", "today's date", "what day is it", "the date"],
+        "response": "__DYNAMIC_DATE__"
+      },
+      {
+        "id": "exit",
+        "priority": 200,
+        "kind": "action",
+        "patterns": ["exit", "quit", "goodbye", "bye", "stop", "shut down", "shutdown"],
+        "response": "Goodbye. Have a productive day."
+      }
+    ]
+  }
